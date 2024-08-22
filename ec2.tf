@@ -18,6 +18,7 @@ resource "aws_instance" "web" {
   ami                  = data.aws_ami.ubuntu.id
   instance_type        = "t3.micro"
   iam_instance_profile = aws_iam_instance_profile.ec2_profile.name
+  subnet_id            = module.vpc.public_subnets[0]
 
   tags = {
     Environment = var.environment
