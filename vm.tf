@@ -1,4 +1,4 @@
-resource "azurerm_virtual_machine" "ProdSrv" {
+resource "azurerm_virtual_machine" "vm" {
   name                  = "vm-${var.prefix}-${var.subscription}"
   location              = azurerm_resource_group.rg.location
   resource_group_name   = azurerm_resource_group.rg.name
