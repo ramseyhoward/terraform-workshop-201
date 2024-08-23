@@ -4,8 +4,12 @@ variable "prefix" {
   default     = "ramsey-workshop"
 }
 
-variable "environment" {
-  description = "Environment being deployed to"
-  type        = string
-  default     = "sandbox"
+variable "subscription" {
+  description = "Subscription being deployed to"
+  type = string
+}
+
+variable "createdby" {
+  description = "Creator of this resource"
+  type = string
 }
